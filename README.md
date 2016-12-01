@@ -1,4 +1,4 @@
-# The Static Web JavaScript Quiz
+
 
 ## Setup
 
