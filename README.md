@@ -54,7 +54,7 @@ If either of the input fields does not have a value in it when the user presses 
 
 Here's what the pine tree should look like when you specify a height of 7, and use the asterisk character.
 
-```js
+```
       *
      ***
     *****
