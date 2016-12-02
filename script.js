@@ -45,7 +45,7 @@ var numbOfChars = 1;
         }
         console.log("```\n");
 
-        if ((treeSpecs.height.value === null) || (treeSpecs.character.value === '')) {
+        if ((treeSpecs.height.value === undefined) || (treeSpecs.character.value === '')) {
             alert('Both fields must have a value')
         }
 };
