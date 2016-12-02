@@ -22,11 +22,17 @@ function tree (myObject) {
 treeSpecs.height = document.querySelector('#tree-height').value;
 
 
-var treeSpot = document.querySelector('#tree-spot');
-
 var numbOfSpaces = treeSpecs.height;
 
 var numbOfChars = 1;
+
+         if ((treeSpecs.height === '') || (treeSpecs.character.value === '')) {
+
+            console.log(treeSpecs.height)
+             
+             alert('Both fields must have a value')
+
+         } else {
 
         console.log("```\n");
 
@@ -45,9 +51,9 @@ var numbOfChars = 1;
         }
         console.log("```\n");
 
-        if ((treeSpecs.height.value === undefined) || (treeSpecs.character.value === '')) {
-            alert('Both fields must have a value')
-        }
+        console.log(treeSpecs.height);
+    }
+
 };
 
 
