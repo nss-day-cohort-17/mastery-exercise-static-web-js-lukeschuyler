@@ -13,22 +13,17 @@ var growTree = document.querySelector('#growtree');
 treeSpecs.character = document.querySelector('#character')
 
 
-
-
 // Main grow function
 
 function tree (myObject) {
 
-treeSpecs.height = document.querySelector('#tree-height').value;
+myObject.height = document.querySelector('#tree-height').value;
 
-
-var numbOfSpaces = treeSpecs.height;
+var numbOfSpaces = myObject.height;
 
 var numbOfChars = 1;
 
-         if ((treeSpecs.height === '') || (treeSpecs.character.value === '')) {
-
-            console.log(treeSpecs.height)
+        if ((myObject.height === '') || (myObject.character.value === '')) {
              
              alert('Both fields must have a value')
 
@@ -36,11 +31,11 @@ var numbOfChars = 1;
 
         console.log("```\n");
 
-        for (var i = 0; i <= treeSpecs.height; i++ ) {
+        for (var i = 0; i <= myObject.height; i++ ) {
 
             var blankSpace = ' '.repeat(numbOfSpaces);
 
-            var printChars = treeSpecs.character.value.repeat(numbOfChars)
+            var printChars = myObject.character.value.repeat(numbOfChars)
 
             console.log(blankSpace + printChars + blankSpace + '\n');
 
@@ -51,7 +46,6 @@ var numbOfChars = 1;
         }
         console.log("```\n");
 
-        console.log(treeSpecs.height);
     }
 
 };
@@ -61,18 +55,58 @@ var numbOfChars = 1;
 // Event Listeners
 
 
-growTree.addEventListener("click", tree);
+growTree.addEventListener("click", function (e) {
+    e.preventDefault();
+    tree(treeSpecs);
+});
 
 document.getElementById('tree-height').addEventListener('keypress', function (e) {
     var key = e.which || e.keyCode;
     if (key === 13) { 
-        tree();
+        tree(treeSpecs);
     }
 });
 
 document.getElementById('character').addEventListener('keypress', function (e) {
     var key = e.which || e.keyCode;
     if (key === 13) { 
-        tree();
+        tree(treeSpecs);
     }
 });
+
+
+
+// function tree (myObject) {
+
+// treeSpecs.height = document.querySelector('#tree-height').value;
+
+// var numbOfSpaces = treeSpecs.height;
+
+// var numbOfChars = 1;
+
+//         if ((treeSpecs.height === '') || (treeSpecs.character.value === '')) {
+             
+//              alert('Both fields must have a value')
+
+//          } else {
+
+//         console.log("```\n");
+
+//         for (var i = 0; i <= treeSpecs.height; i++ ) {
+
+//             var blankSpace = ' '.repeat(numbOfSpaces);
+
+//             var printChars = treeSpecs.character.value.repeat(numbOfChars)
+
+//             console.log(blankSpace + printChars + blankSpace + '\n');
+
+//              numbOfSpaces -= 1;
+
+//              numbOfChars += 2;
+
+//         }
+//         console.log("```\n");
+
+//     }
+
+// };
