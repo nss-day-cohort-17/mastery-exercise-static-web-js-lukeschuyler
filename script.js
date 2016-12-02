@@ -5,15 +5,22 @@ var treeSpecs = {
     character: '',
 }
 
+
 // Variable attatched to html elements
 
 var growTree = document.querySelector('#growtree');
 
 treeSpecs.character = document.querySelector('#character')
 
-function tree () {
+
+
+
+// Main grow function
+
+function tree (myObject) {
 
 treeSpecs.height = document.querySelector('#tree-height').value;
+
 
 var treeSpot = document.querySelector('#tree-spot');
 
@@ -38,12 +45,15 @@ var numbOfChars = 1;
         }
         console.log("```\n");
 
-        if ((treeSpecs.height.value == null) || (treeSpecs.character.value == '')) {
+        if ((treeSpecs.height.value === null) || (treeSpecs.character.value === '')) {
             alert('Both fields must have a value')
         }
 };
 
-// Event Listener on button
+
+
+// Event Listeners
+
 
 growTree.addEventListener("click", tree);
 
