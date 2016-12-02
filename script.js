@@ -37,6 +37,10 @@ var numbOfChars = 1;
 
         }
         console.log("```\n");
+
+        if ((treeSpecs.height.value == null) || (treeSpecs.character.value == '')) {
+            alert('Both fields must have a value')
+        }
 };
 
 // Event Listener on button
