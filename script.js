@@ -49,3 +49,10 @@ document.getElementById('tree-height').addEventListener('keypress', function (e)
         tree();
     }
 });
+
+document.getElementById('character').addEventListener('keypress', function (e) {
+    var key = e.which || e.keyCode;
+    if (key === 13) { 
+        tree();
+    }
+});
