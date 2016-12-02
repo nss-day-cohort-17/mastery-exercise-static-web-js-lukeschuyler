@@ -1,0 +1,15 @@
+form {
+    color: green;
+    font-size: 2em;
+}
+
+input {
+    font-size: 1rem;
+}
+
+#tree-spot {
+    line-height: 20px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+}
