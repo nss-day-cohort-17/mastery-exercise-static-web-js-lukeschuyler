@@ -23,28 +23,32 @@ var numbOfSpaces = myObject.height;
 
 var numbOfChars = 1;
 
+        // conditional statement for whether fields are valid
+
         if ((myObject.height === '') || (myObject.character.value === '')) {
              
              alert('Both fields must have a value')
 
-         } else {
+             } else {
 
-        console.log("```\n");
+            //  if valid than run the loop for the christmas tree
 
-        for (var i = 0; i <= myObject.height; i++ ) {
+            console.log("```\n");
 
-            var blankSpace = ' '.repeat(numbOfSpaces);
+            for (var i = 0; i < myObject.height; i++ ) {
 
-            var printChars = myObject.character.value.repeat(numbOfChars)
+                var blankSpace = ' '.repeat(numbOfSpaces);
 
-            console.log(blankSpace + printChars + blankSpace + '\n');
+                var printChars = myObject.character.value.repeat(numbOfChars);
 
-             numbOfSpaces -= 1;
+                console.log(blankSpace + printChars + blankSpace + '\n');
 
-             numbOfChars += 2;
+                 numbOfSpaces -= 1;
+
+                 numbOfChars += 2;
 
         }
-        console.log("```\n");
+                console.log("```\n");
 
     }
 
@@ -73,40 +77,3 @@ document.getElementById('character').addEventListener('keypress', function (e) {
         tree(treeSpecs);
     }
 });
-
-
-
-// function tree (myObject) {
-
-// treeSpecs.height = document.querySelector('#tree-height').value;
-
-// var numbOfSpaces = treeSpecs.height;
-
-// var numbOfChars = 1;
-
-//         if ((treeSpecs.height === '') || (treeSpecs.character.value === '')) {
-             
-//              alert('Both fields must have a value')
-
-//          } else {
-
-//         console.log("```\n");
-
-//         for (var i = 0; i <= treeSpecs.height; i++ ) {
-
-//             var blankSpace = ' '.repeat(numbOfSpaces);
-
-//             var printChars = treeSpecs.character.value.repeat(numbOfChars)
-
-//             console.log(blankSpace + printChars + blankSpace + '\n');
-
-//              numbOfSpaces -= 1;
-
-//              numbOfChars += 2;
-
-//         }
-//         console.log("```\n");
-
-//     }
-
-// };
